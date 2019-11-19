@@ -1,4 +1,4 @@
-import { City} from './../src/city.js';
+import { City } from './../src/city.js';
 
 describe('City', () => {
   jest.useFakeTimers();
@@ -17,13 +17,13 @@ describe('City', () => {
     expect(city.name).toEqual("Paris");
   });
   test('should correctly list the population', () => {
-    expect(city.pop).toEqual(500);
+    expect(city.currentPop).toEqual(500);
   });
   test('should correctly list the rate', () => {
     expect(city.rate).toEqual(10);
   });
   test('should have a pop of 490 after 1000 milliseconds', () => {
     jest.advanceTimersByTime(1001);
-    expect(city.pop).toEqual(490);
+    expect(city.currentPop).toEqual(490);
   });
 });

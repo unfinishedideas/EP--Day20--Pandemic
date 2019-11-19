@@ -1,12 +1,13 @@
 export class City {
   constructor (name, pop, rate){
     this.name = name;
-    this.pop = pop;
+    this.currentPop = pop;
+    this.originalPop = pop; 
     this.rate = rate;
   }
   cityDamage(){
     setInterval(() => {
-      this.pop -= this.rate;
+      this.currentPop -= this.rate;
     }, 1000);
   }
 }
